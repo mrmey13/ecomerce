@@ -1,0 +1,81 @@
+.product-card {
+  // width: 16.66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 147px;
+  min-height: 251px;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  margin: 10px 0;
+
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+
+  > div,
+  p {
+    margin: 0;
+    padding: 0px 5px;
+  }
+  .product-image {
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    width: 147px;
+    height: 147px;
+  }
+
+  .product-name {
+    padding-top: 3px;
+    font-size: 14px;
+    color: #3358ff;
+    line-height: 1.2em;
+    > a {
+      &:hover {
+        color: #9baeff;
+      }
+    }
+  }
+
+  .product-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    font-weight: 500;
+    .main-price {
+      color: #aaaaaa;
+      text-decoration: line-through;
+    }
+    .discount-price {
+      color: #ff1e1e;
+    }
+  }
+
+  .product-selled {
+    // margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .product-rate {
+      // width: 49.9%;
+      .ant-rate {
+        font-size: 11px;
+      }
+    }
+
+    .product-sold {
+      // width: 49.9%;
+      font-style: italic;
+      font-size: 11px;
+      color: #aaaaaa;
+      // padding-bottom: 0;
+    }
+  }
+
+  .ant-rate-star:not(:last-child) {
+    margin-right: 3px;
+  }
+}
