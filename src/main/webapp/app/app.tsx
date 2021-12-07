@@ -1,6 +1,8 @@
 import 'react-toastify/dist/ReactToastify.css';
 import './app.scss';
+import './main-view.scss';
 import 'app/config/dayjs.ts';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 import React, { useEffect } from 'react';
 import { Card } from 'reactstrap';
@@ -39,25 +41,17 @@ export const App = () => {
   return (
     <Router basename={baseHref}>
       <div className="app-container" style={{ paddingTop }}>
-        <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" />
-        <ErrorBoundary>
-          <Header
-            isAuthenticated={isAuthenticated}
-            isAdmin={isAdmin}
-            currentLocale={currentLocale}
-            ribbonEnv={ribbonEnv}
-            isInProduction={isInProduction}
-            isOpenAPIEnabled={isOpenAPIEnabled}
-          />
-        </ErrorBoundary>
-        <div className="container-fluid view-container" id="app-view-container">
-          <Card className="jh-card">
-            <ErrorBoundary>
-              <AppRoutes />
-            </ErrorBoundary>
-          </Card>
-          <Footer />
-        </div>
+        {/* <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" /> */}
+        <Header
+          isAuthenticated={isAuthenticated}
+          isAdmin={isAdmin}
+          currentLocale={currentLocale}
+          ribbonEnv={ribbonEnv}
+          isInProduction={isInProduction}
+          isOpenAPIEnabled={isOpenAPIEnabled}
+        />
+        <AppRoutes />
+        <Footer />
       </div>
     </Router>
   );

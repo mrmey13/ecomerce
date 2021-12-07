@@ -1,0 +1,45 @@
+.view-center {
+  display: flex;
+  justify-content: center;
+
+  .main-container {
+    display: flex;
+    justify-content: space-around;
+    min-width: 1200px;
+
+    .filter-container {
+      width: 186px;
+    }
+
+    .product-list-view {
+      width: 994px;
+
+      .product-list-card {
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        box-shadow: 1px 1px 1px #cccccc;
+
+        .product-list-card-header {
+          border-bottom: 1px solid #999999;
+
+          .tabs-link {
+            width: 130px;
+            text-align: center;
+          }
+          .active {
+            color: #ff0707;
+            font-weight: 600;
+            border-bottom: 2px solid #ff0707;
+          }
+        }
+
+        .product-list-card-body {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

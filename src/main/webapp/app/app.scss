@@ -23,8 +23,9 @@ a {
 
 .app-container {
   box-sizing: border-box;
+  min-width: 1200px;
   .view-container {
-    width: 100%;
+    // width: 100%;
     height: calc(100% - 40px);
     overflow-y: auto;
     overflow-x: hidden;
