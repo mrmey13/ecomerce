@@ -95,6 +95,7 @@ out/
 *.war
 *.ear
 *.db
+package-lock.json
 
 ######################
 # Windows
