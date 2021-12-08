@@ -1,7 +1,7 @@
 import './categories.scss';
 import React from 'react';
 import Product from './product';
-import { Breadcrumb } from 'antd';
+import { Breadcrumb, Pagination } from 'antd';
 
 const Category = () => {
   return (
@@ -36,6 +36,30 @@ const Category = () => {
             <Product
               product={{
                 id: 0,
+                name: 'Ten san pham',
+                mainPrice: 100000,
+                discountPrice: 2000,
+                url: '/category',
+                image: 'content/images/logo-jhipster.png',
+                rating: 1.5,
+                sold: 120,
+              }}
+            />
+            <Product
+              product={{
+                id: 0,
+                name: 'Ten san pham',
+                mainPrice: 100000,
+                discountPrice: 2000,
+                url: '/category',
+                image: 'content/images/logo-jhipster.png',
+                rating: 1.5,
+                sold: 120,
+              }}
+            />
+            <Product
+              product={{
+                id: 0,
                 name: 'Ten san phamasd hgdasvg hdasfdasfdc',
                 mainPrice: 100000,
                 discountPrice: 2000,
@@ -45,7 +69,16 @@ const Category = () => {
                 sold: 120,
               }}
             />
+            <div className="fill-card" />
+            <div className="fill-card" />
+            <div className="fill-card" />
+            <div className="fill-card" />
+            <div className="fill-card" />
+            <div className="fill-card" />
           </div>
+        </div>
+        <div className="product-list-pagination">
+          <Pagination defaultCurrent={1} current={6} pageSize={10} total={100} />
         </div>
       </div>
     </>

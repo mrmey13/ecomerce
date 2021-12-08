@@ -1,4 +1,5 @@
 import './categories.scss';
+import './product-card.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Rate } from 'antd';
