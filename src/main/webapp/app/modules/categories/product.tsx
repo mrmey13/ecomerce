@@ -21,9 +21,11 @@ const Product = ({ product }: { product: Product }) => {
 
   return (
     <div className="product-card">
-      <div className="product-image">
-        <img src={product.image} alt="Logo" />
-      </div>
+      <Link to={product.url}>
+        <div className="product-image">
+          <img src={product.image} alt="Logo" />
+        </div>
+      </Link>
       <div className="product-card-body">
         <div className="product-name">
           <Link to={product.url}>{product.name}</Link>
