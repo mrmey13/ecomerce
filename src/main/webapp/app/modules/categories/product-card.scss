@@ -15,6 +15,7 @@ $height-card: 251px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px #bbbbbb;
   margin: 10px 0;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.03, 1.03);
@@ -27,8 +28,8 @@ $height-card: 251px;
   }
 
   .product-image {
-    border: 1px solid #bbbbbb;
-    border-radius: 3px;
+    border-bottom: 1px solid #bbbbbb;
+    // border-radius: 3px;
     width: $width-card;
     height: $width-card;
     padding: 0;
