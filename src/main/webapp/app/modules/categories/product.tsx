@@ -33,7 +33,7 @@ const Product = ({ product }: { product: Product }) => {
         </div>
         <div className="product-price">
           {product.discountPrice && <span className="discount-price">{`${formatPrice(product.discountPrice)}đ`}</span>}
-          <span className="main-price">{`${formatPrice(1000)}đ`}</span>
+          <span className="main-price">{`${formatPrice(product.mainPrice)}đ`}</span>
         </div>
         <div className="product-selled">
           <span className="product-rate">
