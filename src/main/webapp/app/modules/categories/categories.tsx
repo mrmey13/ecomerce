@@ -1,7 +1,8 @@
 import './categories.scss';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Product from './product';
-import { Breadcrumb, Pagination, Rate } from 'antd';
+import { Breadcrumb, Carousel, Pagination, Rate } from 'antd';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 import { fakeData } from './fakeData';
@@ -18,6 +19,7 @@ const Category = () => {
   const [ratingFilter, setRatingFilter] = useState<Rating>(0);
   const [sortBy, setSortBy] = useState<SortBy>('popular');
   const [priceFilter, setPriceFilter] = useState<PriceFilter>({ startPrice: '', endPrice: '' });
+  const carouselRef = useRef(null);
 
   const onChangePrice = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setPriceFilter({ ...priceFilter, [event.target.name]: event.target.value.replace(/[^0-9]/g, '') });
@@ -36,7 +38,21 @@ const Category = () => {
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
-        <div className="banner-view"></div>
+        <div className="banner-view">
+          <Carousel ref={carouselRef} autoplay autoplaySpeed={5000}>
+            {fakeData.map((item, index) => (
+              <div key={index}>
+                <img src={item.image} />
+              </div>
+            ))}
+          </Carousel>
+          <a className="carousel-btn-prev" onClick={() => carouselRef.current.prev()}>
+            <LeftOutlined />
+          </a>
+          <a className="carousel-btn-next" onClick={() => carouselRef.current.next()}>
+            <RightOutlined />
+          </a>
+        </div>
         <div className="flex-container">
           <div className="filter-container">
             <div className="category-list-view">
