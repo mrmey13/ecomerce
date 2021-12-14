@@ -1,4 +1,5 @@
 import './categories.scss';
+import './product-card.scss';
 import React, { useRef, useState } from 'react';
 import Product from './product';
 import { Breadcrumb, Carousel, Pagination, Rate } from 'antd';
@@ -178,12 +179,6 @@ const Category = () => {
                 {fakeData.map((item, index) => (
                   <Product key={index} product={item} />
                 ))}
-                <div className="fill-card" />
-                <div className="fill-card" />
-                <div className="fill-card" />
-                <div className="fill-card" />
-                <div className="fill-card" />
-                <div className="fill-card" />
               </div>
             </div>
             <div className="product-list-pagination">
