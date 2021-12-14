@@ -178,8 +178,7 @@
 
     .product-list-card-body {
       display: grid;
-      grid-template-columns: 20% 20% 20% 20% 20%;
-      // grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+      grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
       justify-content: space-between;
     }
   }
