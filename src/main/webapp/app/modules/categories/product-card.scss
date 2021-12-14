@@ -1,20 +1,14 @@
-$width-card: 147px;
-$height-card: 251px;
-
-.fill-card {
-  width: 147px;
-}
-
 .product-card {
   display: flex;
   flex-direction: column;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  width: $width-card;
-  height: $height-card;
+  width: calc(100% - 10px);
+  min-width: 120px;
+  aspect-ratio: 1/1.6;
   border: 1.5px solid #aaaaaa;
   border-radius: 3px;
   box-shadow: 1px 1px 2px #bbbbbb;
-  margin: 10px 0;
+  margin: 10px auto;
   overflow: hidden;
 
   &:hover {
@@ -29,14 +23,13 @@ $height-card: 251px;
 
   .product-image {
     border-bottom: 1px solid #bbbbbb;
-    // border-radius: 3px;
-    width: $width-card;
-    height: $width-card;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     padding: 0;
     > img {
-      width: $width-card;
-      height: $width-card;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: unset;
       border-radius: 2px;
     }
   }
@@ -44,7 +37,8 @@ $height-card: 251px;
   .product-card-body {
     display: flex;
     flex-direction: column;
-    height: inherit;
+    width: 100%;
+    aspect-ratio: 1/ 0.6;
     padding: 2px 5px;
     .product-name {
       padding-top: 3px;
@@ -80,7 +74,6 @@ $height-card: 251px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 5px;
       .product-rate {
         .ant-rate {
           font-size: 11px;
